@@ -1,4 +1,6 @@
-package main;
+package main.Jam.Guess.Jam.Guess;
+
+import main.Jam.Guess.Jam.Guess.IUser;
 
 public class User implements IUser {
 

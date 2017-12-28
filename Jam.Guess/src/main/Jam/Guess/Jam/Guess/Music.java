@@ -1,4 +1,4 @@
-package main;
+package main.Jam.Guess.Jam.Guess;
 
 public class Music {
     public String title;
