@@ -1,8 +1,7 @@
 package main.Jam.Guess.Jam.Guess.audioplayer;
 
-import aud.io.IMedia;
-import aud.io.IPlayer;
-import aud.io.Votable;
+import main.Jam.Guess.IMedia;
+import main.Jam.Guess.IPlayer;
 import uk.co.caprica.vlcj.component.AudioMediaPlayerComponent;
 
 import java.io.File;
@@ -42,15 +41,12 @@ public class AudioPlayer implements IPlayer {
     }
 
     @Override
-    public void play(Votable votable) {
+    public void play() {
         //load new song and start playing
         if (currentSong != null){
             currentSong.exit();
         }
         //TODO: Revise with thread handling in mind
-        currentSong = new PlayerRunnable(votable.getMedia(), pool, this, VLCPlayer);
-
-        pool.submit(currentSong);
         play();
     }
 

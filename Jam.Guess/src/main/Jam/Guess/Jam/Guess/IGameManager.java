@@ -1,7 +1,9 @@
 package main.Jam.Guess.Jam.Guess;
 
+import java.rmi.RemoteException;
+
 public interface IGameManager {
-    boolean login(String username, String password);
+    User login(String username, String password);
 
     boolean registerUser(User newuser);
 
@@ -10,4 +12,7 @@ public interface IGameManager {
     void acceptFriend(String username);
 
     boolean createGame(User Host, User opponent);
+
+    boolean logout(User user);
+
 }

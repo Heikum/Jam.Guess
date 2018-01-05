@@ -11,6 +11,11 @@ public class User implements IUser {
         this.password = password;
     }
 
+    public User(String username)
+    {
+        this.username = username;
+    }
+
 
     public int getId() {
         return id;

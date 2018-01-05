@@ -4,6 +4,7 @@ import aud.io.IMedia;
 import aud.io.Votable;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import main.Jam.Guess.IMedia;
 import org.jongo.marshall.jackson.oid.MongoObjectId;
 
 import java.io.Serializable;
