@@ -25,10 +25,7 @@ public class AudioPlayer implements IPlayer {
     }
 
 
-    @Override
-    public void play() {
-        currentSong.play();
-    }
+
 
     @Override
     public void stop() {
@@ -47,7 +44,7 @@ public class AudioPlayer implements IPlayer {
             currentSong.exit();
         }
         //TODO: Revise with thread handling in mind
-        play();
+
     }
 
     private class PlayerRunnable implements Runnable{

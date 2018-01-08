@@ -1,10 +1,12 @@
 package Rmi;
 
+import main.Jam.Guess.Jam.Guess.GameManager;
+import main.Jam.Guess.Jam.Guess.IGame;
+import main.Jam.Guess.Jam.Guess.IGameManager;
 import main.Jam.Guess.Jam.Guess.fontyspublisher.RemotePublisher;
 import main.Jam.Guess.Jam.Guess.fontyspublisher.SharedData;
 import main.Jam.Guess.Jam.Guess.log.Logger;
-import aud.io.rmi.IPartyManager;
-import aud.io.rmi.PartyManager;
+
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -25,7 +27,7 @@ public class ApplicationServer {
         try {
             logger.log(Level.FINE, "Server will start.");
             RemotePublisher publisher = new RemotePublisher();
-            IPartyManager server = new PartyManager(publisher);
+            IGameManager server = new GameManager(publisher);
             Registry registry = LocateRegistry.createRegistry(port);
             logger.log(Level.INFO, "Registry created");
             registry.rebind(publisherName, publisher);

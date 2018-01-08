@@ -1,6 +1,8 @@
 package main.Jam.Guess.Jam.Guess.fontyspublisher;
 
-import aud.io.log.Logger;
+
+
+import main.Jam.Guess.Jam.Guess.log.Logger;
 
 import java.io.FileInputStream;
 import java.io.IOException;

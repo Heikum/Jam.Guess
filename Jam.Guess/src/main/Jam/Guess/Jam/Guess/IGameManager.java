@@ -1,8 +1,9 @@
 package main.Jam.Guess.Jam.Guess;
 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface IGameManager {
+public interface IGameManager extends Remote {
     User login(String username, String password);
 
     boolean registerUser(User newuser);

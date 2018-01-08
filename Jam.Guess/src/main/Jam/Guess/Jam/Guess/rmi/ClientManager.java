@@ -73,7 +73,7 @@ public class ClientManager extends UnicastRemoteObject implements IRemotePropert
         }
 
         registeredUser = (User) user;
-        logger.log(Level.INFO, String.format("%s logged in", user.getUsername());
+        logger.log(Level.INFO, String.format("%s logged in", user.getUsername()));
         return registeredUser;
         //return String.format("You logged in as: %s", user.getNickname());
     }
