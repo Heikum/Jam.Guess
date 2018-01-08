@@ -1,20 +1,34 @@
 package main.Jam.Guess.database;
+import main.Jam.Guess.IDatabase;
+import main.Jam.Guess.Jam.Guess.User;
+
 import java.sql.*;
 
-public class Database {
+public class Database implements IDatabase{
 
-    static String url = "jdbc:mysql://localhost:3306/jam.guess";
-    static String username = "root";
-    static String password = "loler123";
+    private static DatabaseConnection databaseconnection;
+    private Connection connection;
+    Statement stmt = null;
 
-    public static void main(String[] args) {
-        System.out.println("Connecting database...");
-
-        try (Connection connection = DriverManager.getConnection(url, username, password)) {
-            System.out.println("Database connected!");
-        } catch (SQLException e) {
-            throw new IllegalStateException("Cannot connect the database!", e);
+    public void registerUser(String Username, String Password)
+    {
+        Connection connection = databaseconnection.connect();
+        try {
+            stmt = connection.createStatement();
+            stmt.executeQuery("INSERT INTO users " + "VALUES ('Hicham', 'Test')");
         }
+        catch (Exception e)
+        {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+
+
+    }
+
+    public User loginUser(String Username, String Password)
+    {
+        return new User("hich", "lol");
     }
 
 }
