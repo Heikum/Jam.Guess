@@ -18,8 +18,9 @@ public class RegisterController {
     private PasswordField tbPassword;
     @FXML
     private TextField tbUsername;
-    public void setStage(Stage stage) {
+    public void setStage(Stage stage)  {
         this.stage = stage;
+        database = new Database();
     }
 
     public void register(ActionEvent actionEvent) throws IOException {

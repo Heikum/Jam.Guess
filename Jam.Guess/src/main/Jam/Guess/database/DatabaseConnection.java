@@ -9,11 +9,11 @@ public class DatabaseConnection {
     static String username = "root";
     static String password = "loler123";
 
-    public static Connection connect()
+    public Connection connect()
     {
         System.out.println("Connecting database...");
-
-        try (Connection connection = DriverManager.getConnection(url, username, password)) {
+        try {
+            Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Database connected!");
             return connection;
         } catch (SQLException e) {

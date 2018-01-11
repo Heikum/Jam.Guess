@@ -15,6 +15,11 @@ public class User implements IUser {
     {
         this.username = username;
     }
+    public User(int accountID, String username)
+    {
+        this.id = accountID;
+        this.username = username;
+    }
     public User(String username, String password) {this.username = username; this.password = password;}
 
 
